@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.top-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 100px;
+  align-items: center;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  list-style: none;
+}
+
+.navigation li {
+  cursor: pointer;
+}
+
+.navigation li:hover {
+  color: rgb(34, 150, 228);
+}
+
+main {
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.articles {
+  width: 75%;
+}
+.side-bar {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  padding: 10px 0;
+}
+
+.author {
+  padding: 14px 0 50px 0;
+}
+
+img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+h3 {
+  font-size: 36px;
+  padding: 15px 0 15px 0;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #ccc;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 20px 0;
+}
+
+input[type="text"] {
+  width: 70%;
+  height: 30px;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  padding-left: 5px;
+}
+
+input[type="text"]:focus {
+  outline: 1px solid rgb(34, 150, 228);
+}
+
+input[type="submit"] {
+  height: 30px;
+  width: 50px;
+  border-radius: 0 10px 10px 0;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  color: aliceblue;
+  background-color: rgb(34, 150, 228);
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(211, 212, 212);
+  color: rgb(34, 150, 228);
+}
+
+.categories {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 20px;
+}
+
+.categories ul {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.categories li {
+  cursor: pointer;
+}
+
+.categories li:hover {
+  color: rgb(34, 150, 228);
+}
+
+.tags {
+  display: flex;
+  margin-top: 30px;
+  border: 1px solid #ccc;
+  padding: 0px;
+  gap: 10px;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.tags h2 {
+  padding: 20px;
+}
+
+.button-tag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: start;
+  margin: 0 auto;
+  width: 90%;
+  padding: 0 0 15px 0;
+}
+
+.button-tag button {
+  display: flex;
+  cursor: pointer;
+  width: auto;
+  height: 30px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+}
+
+.button-tag button:hover {
+  background-color: rgb(34, 150, 228);
+  color: aliceblue;
+}
+
+footer {
+  margin-top: 50px;
+  padding: 40px;
+  text-align: center;
+}
+
+/* responsividade */
+
+@media screen and (max-width: 1400px) {
+  .articles {
+    width: 70%;
+  }
+  .side-bar {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    width: 100%;
+  }
+
+  .articles {
+    width: 65%;
+  }
+  .side-bar {
+    width: 34%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p,
+  li {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p,
+  li {
+    font-size: 12px;
+  }
+
+  .top-page {
+    padding: 10px;
+    justify-content: space-around;
+    gap: 30px;
+  }
+
+  .navigation {
+    gap: 10px;
+  }
+
+  main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search,
+  .categories,
+  .articles {
+    width: 100%;
+  }
+
+  .side-bar {
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+}
